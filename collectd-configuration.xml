@@ -1,0 +1,14 @@
+<package name="Firebird">
+  <filter>categoryName == 'FirebirdSQL'</filter>
+  <include-range begin="1.1.1.1" end="254.254.254.254"/>
+  <service name="DATABASE-NAME" interval="300000" user-defined="false" status="on">
+    <parameter key="collection" value="DATABASE-COLLECTION-NAME"/>
+    <parameter key="thresholding-enabled" value="true"/>
+    <parameter key="driver" value="org.firebirdsql.jdbc.FBDriver"/>
+    <parameter key="user" value="DATABASE-LOGIN-USERNAME"/>
+    <parameter key="password" value="DATABASE-LOGIN-PASSWORD"/>
+    <parameter key="url" value="jdbc:firebirdsql:srv-fb01/3050:AVS_Main"/>
+  </service>
+</package>
+
+<collector service="DATABASE-NAME" class-name="org.opennms.netmgt.collectd.JdbcCollector"/>
