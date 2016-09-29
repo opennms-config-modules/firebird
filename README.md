@@ -41,6 +41,10 @@ If you need to check the database connection as a OpenNMS service, follow these 
 
 * restart OpenNMS to load the new configuration
 
+## Misc
+
+* Firebird monitoring documentation: http://www.firebirdsql.org/file/documentation/reference_manuals/fblangref25-en/html/fblangref25-appx05-montables.html
+
 # License & Authors
 
 - Author:: Marcel Fuhrmann <fuhrmann@n3rd.org>
