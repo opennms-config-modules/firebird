@@ -1,0 +1,80 @@
+<jdbc-collection name="DATABASE-COLLECTION-NAME">
+  <rrd step="300">
+    <rra>RRA:AVERAGE:0.5:1:2016</rra>
+    <rra>RRA:AVERAGE:0.5:12:1488</rra>
+    <rra>RRA:AVERAGE:0.5:288:366</rra>
+    <rra>RRA:MAX:0.5:288:366</rra>
+    <rra>RRA:MIN:0.5:288:366</rra>
+  </rrd>
+  <queries>
+
+    <query name="FbClientCntAct" ifType="ignore">
+      <statement>
+        <queryString>
+            SELECT COUNT(*) AS FbClientCntAct FROM MON$ATTACHMENTS WHERE MON$STATE = '1'
+        </queryString>
+      </statement>
+      <columns>
+        <column name="FbClientCntAct" data-source-name="FbClientCntAct"
+            alias="FbClientCntAct" type="gauge"/>
+      </columns>
+    </query>
+    <query name="FbClientCntInact" ifType="ignore">
+      <statement>
+        <queryString>
+            SELECT COUNT(*) AS FbClientCntInact FROM MON$ATTACHMENTS WHERE MON$STATE = '0'
+        </queryString>
+      </statement>
+      <columns>
+        <column name="FbClientCntInact" data-source-name="FbClientCntInact"
+            alias="FbClientCntInact" type="gauge"/>
+      </columns>
+    </query>
+    <query name="FbTransactCntAct" ifType="ignore">
+      <statement>
+        <queryString>
+            SELECT COUNT(*) AS FbTransactCntAct FROM MON$TRANSACTIONS WHERE MON$STATE = '1'
+        </queryString>
+      </statement>
+      <columns>
+        <column name="FbTransactCntAct" data-source-name="FbTransactCntAct"
+            alias="FbTransactCntAct" type="gauge"/>
+      </columns>
+    </query>
+    <query name="FbTransactCntInact" ifType="ignore">
+      <statement>
+        <queryString>
+            SELECT COUNT(*) AS FbTransactCntInact FROM MON$TRANSACTIONS WHERE MON$STATE = '0'
+        </queryString>
+      </statement>
+      <columns>
+        <column name="FbTransactCntInact" data-source-name="FbTransactCntInact"
+            alias="FbTransactCntInact" type="gauge"/>
+      </columns>
+    </query>
+    <query name="FbStateCntAct" ifType="ignore">
+      <statement>
+        <queryString>
+            SELECT COUNT(*) AS FbStateCntAct FROM MON$STATEMENTS WHERE MON$STATE = '1'
+        </queryString>
+      </statement>
+      <columns>
+        <column name="FbStateCntAct" data-source-name="FbStateCntAct"
+            alias="FbStateCntAct" type="gauge"/>
+        </columns>
+    </query>
+    <query name="FbStateCntInact" ifType="ignore">
+      <statement>
+        <queryString>
+            SELECT COUNT(*) AS FbStateCntInact FROM MON$STATEMENTS WHERE MON$STATE = '0'
+        </queryString>
+      </statement>
+      <columns>
+        <column name="FbStateCntInact" data-source-name="FbStateCntInact"
+            alias="FbStateCntInact" type="gauge"/>
+      </columns>
+    </query>
+  </queries>
+</jdbc-collection>
+
+            
