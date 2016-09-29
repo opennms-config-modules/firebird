@@ -7,7 +7,7 @@
     <parameter key="driver" value="org.firebirdsql.jdbc.FBDriver"/>
     <parameter key="user" value="DATABASE-LOGIN-USERNAME"/>
     <parameter key="password" value="DATABASE-LOGIN-PASSWORD"/>
-    <parameter key="url" value="jdbc:firebirdsql:srv-fb01/3050:AVS_Main"/>
+    <parameter key="url" value="jdbc:firebirdsql:SERVERNAME/3050:DB-ALIAS"/>
   </service>
 </package>
 
