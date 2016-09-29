@@ -13,17 +13,6 @@ The configuration adds capabilities database connection test and performance dat
 - Jaybird Driver http://www.firebirdsql.org/en/jdbc-driver/
 - OpenNMS Meridian 2015+ or OpenNMS Horizon 14+
 
-## Download the configuration package
-
-.Download the configuration files
-[source, bash]
-----
-mkdir /tmp
-cd /tmp
-curl -L https://github.com/opennms-config-modules/firebird/archive/master.tar.gz | tar xz
-cd firebird
-----
-
 ## Install Jaybird
 
 * Download and extract the Jaybird files and copy **jaybird*.jar*** into $OPENNMS_HOME/lib
