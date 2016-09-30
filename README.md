@@ -15,7 +15,7 @@ The configuration adds capabilities database connection test and performance dat
 
 ## Install Jaybird
 
-* Download and extract the Jaybird files and copy **jaybird*.jar*** into $OPENNMS_HOME/lib
+* Download and extract the Jaybird files and copy **jaybird*.jar** into **$OPENNMS_HOME/lib**
 
 ## Config Collectd
 
